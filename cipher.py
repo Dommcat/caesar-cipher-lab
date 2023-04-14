@@ -24,7 +24,8 @@ def encrypt_function(phrase: str, shift: int) -> str:
     encrypted_text = ''
     for char in phrase:
         if char.isalpha():
-            # Determine the position of the letter in the alphabet
+            # Determine the position of the letter in the alclear
+            phabet
             char_position = alphabet.index(char.lower())
             # Apply the shift and wrap around if necessary
             shifted_position = (char_position + shift) % 26
