@@ -29,11 +29,14 @@ Devise a method for the computer to determine if code was broken with minimal hu
 
 
 
-## Links and Resources
+## Links and Resources Utilized:
 
 ChatGPT 
 Code Fellows TAs
 Captain Google Fingers
+Fellow Students Examples
+
+
 
 ## Setup
 
@@ -52,7 +55,7 @@ pytest tests/test_caesar.py
 
 ## Link to Code
 
-
+[Code](/cipher.py)
 
 
 ## How to initialize/run your application (where applicable)
@@ -63,6 +66,6 @@ N/A
 
 ## How to use your library (where applicable)
 
-
+N/A
 
 ## Tests

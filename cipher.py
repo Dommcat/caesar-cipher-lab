@@ -1,14 +1,10 @@
+# import string
+from english_words import word_list, namelist
 import string
-from corpus import word_list, namelist
 
+def encrypt(text, shift) -> str:
+    encrypted_text =''
 
-
-
-
-
-
-
-def encrypt_function(phrase: str, shift: int) -> str:
     """
     Encrypts the given plain text phrase by shifting each letter in the phrase
     by the specified numeric shift. Shifts that exceed 26 wrap around, and shifts
@@ -18,6 +14,61 @@ def encrypt_function(phrase: str, shift: int) -> str:
     :param shift: The numeric shift used for encryption.
     :return: The encrypted string.
     """
+    while shift > 26:
+        shift -= 26
+
+    for char in text:
+        # convert to ascii number
+        ascii_num = ord(char)
+        shifted = False
+
+        # if weird ascii number, don't shift and return same character
+        if ascii_num < 65 or ascii_num > 122:
+            encrypted_text += char
+            shifted = True
+
+        elif 90 < ascii_num < 97:
+            encrypted_text += char
+            shifted = True
+
+        # lower case character
+        if 96 < ascii_num < 123:
+            ascii_num += shift
+            if ascii_num > 122:
+                ascii_num -= 26
+            encrypted_text += chr(ascii_num)
+
+        # upper case character
+        if 64 < ascii_num < 91:
+            ascii_num += shift
+            if ascii_num > 90:
+                ascii_num -= 26
+            encrypted_text += chr(ascii_num)
+
+    return encrypted_text
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     # Define the alphabet
     alphabet = 'abcdefghijklmnopqrstuvwxyz'
     # Create the encrypted string
@@ -40,7 +91,6 @@ def encrypt_function(phrase: str, shift: int) -> str:
             # Non-alphabetic characters are not encrypted
             encrypted += char
     return encrypted
-
 
 
 # Create an encrypt function that takes in a plain text phrase and a numeric shift.
@@ -67,7 +117,4 @@ def encrypt_function(plain_text, shift):
 
 
 # if __name__ == '__main__':
-#     # print(encrypt("cat", 3)) #e
-#     # print(decrypt("olssv", 7)) # hello
-#     # print(crack("olssv"))
 #     pass

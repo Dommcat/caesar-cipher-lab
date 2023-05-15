@@ -16,5 +16,3 @@ nltk.download('names', quiet=True)
 word_list = words.words()
 namelist = names.words()
 
-
-#Source: Reference TH code for comparison 
