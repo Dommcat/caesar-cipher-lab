@@ -6,10 +6,6 @@
 
 ## Author: Dominick Martin 
 
-## Description:
-
-
-
 ### Feature Tasks and Requirements:
 
 Create an encrypt function that takes in a plain text phrase and a numeric shift.the phrase will then be shifted that many letters.
@@ -27,16 +23,11 @@ create a crack function that will decode the cipher so that an encrypted message
 Devise a method for the computer to determine if code was broken with minimal human guidance.
 
 
-
-
 ## Links and Resources Utilized:
 
 ChatGPT 
-Code Fellows TAs
-Captain Google Fingers
 Fellow Students Examples
-
-
+TA Assistance 
 
 ## Setup
 
@@ -69,3 +60,5 @@ N/A
 N/A
 
 ## Tests
+
+pytest
